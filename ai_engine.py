@@ -16,6 +16,7 @@ class chess_ai:
     evaluate board
     get the value of each piece
     '''
+
     def minimax_white(self, game_state, depth, alpha, beta, maximizing_player, player_color):
         csc = game_state.checkmate_stalemate_checker()
         if maximizing_player:
@@ -141,56 +142,56 @@ class chess_ai:
 
     def get_piece_value(self, piece, player):
         if player is Player.PLAYER_1:
-            if piece.is_player("black"):
-                if piece.get_name() is "k":
-                    return -1000
-                elif piece.get_name() is "q":
-                    return -100
-                elif piece.get_name() is "r":
-                    return -50
-                elif piece.get_name() is "b":
-                    return -30
-                elif piece.get_name() is "n":
-                    return -30
-                elif piece.get_name() is "p":
-                    return -10
-            else:
-                if piece.get_name() is "k":
+            if piece.is_player("white"):
+                if piece.get_name() == "k":
                     return 1000
-                elif piece.get_name() is "q":
+                elif piece.get_name() == "q":
                     return 100
-                elif piece.get_name() is "r":
+                elif piece.get_name() == "r":
                     return 50
-                elif piece.get_name() is "b":
+                elif piece.get_name() == "b":
                     return 30
-                elif piece.get_name() is "n":
+                elif piece.get_name() == "n":
                     return 30
-                elif piece.get_name() is "p":
+                elif piece.get_name() == "p":
                     return 10
+            else:
+                if piece.get_name() == "k":
+                    return -1000
+                elif piece.get_name() == "q":
+                    return -100
+                elif piece.get_name() == "r":
+                    return -50
+                elif piece.get_name() == "b":
+                    return -30
+                elif piece.get_name() == "n":
+                    return -30
+                elif piece.get_name() == "p":
+                    return -10
         else:
             if piece.is_player("white"):
-                if piece.get_name() is "k":
+                if piece.get_name() == "k":
                     return 1000
-                elif piece.get_name() is "q":
+                elif piece.get_name() == "q":
                     return 100
-                elif piece.get_name() is "r":
+                elif piece.get_name() == "r":
                     return 50
-                elif piece.get_name() is "b":
+                elif piece.get_name() == "b":
                     return 30
-                elif piece.get_name() is "n":
+                elif piece.get_name() == "n":
                     return 30
-                elif piece.get_name() is "p":
+                elif piece.get_name() == "p":
                     return 10
             else:
-                if piece.get_name() is "k":
+                if piece.get_name() == "k":
                     return -1000
-                elif piece.get_name() is "q":
+                elif piece.get_name() == "q":
                     return -100
-                elif piece.get_name() is "r":
+                elif piece.get_name() == "r":
                     return -50
-                elif piece.get_name() is "b":
+                elif piece.get_name() == "b":
                     return -30
-                elif piece.get_name() is "n":
+                elif piece.get_name() == "n":
                     return -30
-                elif piece.get_name() is "p":
+                elif piece.get_name() == "p":
                     return -10
